@@ -97,7 +97,7 @@ public class Game extends Canvas implements Runnable {
 				
 			}
 			
-		} catch (ConcurrentModificationException e) { };
+		} catch (Exception e) { };
 		
 		graphics.setColor(Color.red);
 		
@@ -109,7 +109,7 @@ public class Game extends Canvas implements Runnable {
 				
 			}
 			
-		} catch (ConcurrentModificationException e) { };
+		} catch (Exception e) { };
 		
 		//this pushes the graphics to the window
 		bufferStrategy.show();
