@@ -75,13 +75,13 @@ public class Game extends Canvas implements Runnable {
 		
 		//put rendering stuff here
 		
-		double tileSize = (getWidth() < getHeight()) ? getWidth() / board[0].length : getHeight() / board.length;
+		double tileSize = (getWidth() < getHeight()) ? (double) getWidth() / board[0].length : (double) getHeight() / board.length;
 		
 		for (int y = 0; y < board.length; y++) {
 			
 			for (int x = 0; x < board[0].length; x++) {
 				
-				graphics.drawImage(Tiles.getTile(board[y][x]).texture, (int) (x * tileSize), (int) (y * tileSize), (int) tileSize, (int) tileSize, null);
+				graphics.drawImage(Tiles.getTile(board[y][x]).texture, (int) (x * tileSize) + 1, (int) (y * tileSize) + 1, (int) tileSize + 1, (int) tileSize + 1, null);
 				
 			}
 			
